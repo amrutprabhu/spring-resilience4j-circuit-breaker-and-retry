@@ -1,0 +1,25 @@
+resilience4j:
+  retry:
+    retry-aspect-order: 2
+    instances:
+      myRetry:
+        max-attempts: 3
+        wait-duration: 5s
+        enable-exponential-backoff: true
+        exponential-backoff-multiplier: 2
+        retry-exceptions:
+         - org.springframework.web.client.RestClientException
+        ignore-exceptions:
+         - com.amrut.prabhu.IgnoreException
+  circuitbreaker:
+    circuit-breaker-aspect-order: 1
+    instances:
+      myCircuitBreaker:
+        wait-duration-in-open-state: 1m
+        permitted-number-of-calls-in-half-open-state: 3
+        sliding-window-type: count-based
+        sliding-window-size: 5
+        minimum-number-of-calls: 5
+        slow-call-duration-threshold: 10s
+        slow-call-rate-threshold: 60 
+        failure-rate-threshold: 60
