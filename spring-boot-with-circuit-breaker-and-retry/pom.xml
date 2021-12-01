@@ -41,17 +41,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!--		<dependency>-->
-		<!--			<groupId>org.mock-server</groupId>-->
-		<!--			<artifactId>mockserver-netty</artifactId>-->
-		<!--			<version>5.11.2</version>-->
-		<!--		</dependency>-->
-
-		<!--		<dependency>-->
-		<!--			<groupId>org.mock-server</groupId>-->
-		<!--			<artifactId>mockserver-junit-jupiter</artifactId>-->
-		<!--			<version>5.11.1</version>-->
-		<!--		</dependency>-->
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
